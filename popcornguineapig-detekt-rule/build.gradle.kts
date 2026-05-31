@@ -19,6 +19,9 @@ val versionProperties = Properties().apply {
 val versionPublish = versionProperties.getProperty("VERSION")
 
 mavenPublishing {
+    publishToMavenCentral()
+    signAllPublications()
+
     coordinates(
         project.property("GROUP_ID") as String,
         project.property("ARTIFACT_ID") as String,
