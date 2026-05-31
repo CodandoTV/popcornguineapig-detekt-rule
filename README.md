@@ -1,8 +1,14 @@
-# popcornguineapig-detekt-rule
+![Logo do CodandoTV](img/codandotv.png)
 
-Custom detekt plugin from the CodandoTV open-source project that adds code-level static analysis rules to enforce architectural boundaries in Kotlin projects.
+# Welcome! 👋
 
-## Setup
+Welcome to the **popcornguineapig-detekt-rule**! A CodandoTV library : )
+
+<img height="150px" width="100px" src="img/popcorngp-logo.webp" />
+
+Custom detekt plugin from that adds code-level static analysis rules to enforce architectural boundaries in Kotlin projects.
+
+## 🚀 Setup
 
 ### 1. Add the dependency
 
