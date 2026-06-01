@@ -1,3 +1,5 @@
+[![Maven Central Version](https://img.shields.io/maven-central/v/io.github.codandotv/popcornguineapig-detekt-rule)](https://central.sonatype.com/artifact/io.github.codandotv/popcornguineapig-detekt-rule)
+
 ![Logo do CodandoTV](img/codandotv.png)
 
 # Welcome! 👋
@@ -6,7 +8,7 @@ Welcome to the **popcornguineapig-detekt-rule**! A CodandoTV library : )
 
 <img height="150px" width="100px" src="img/popcorngp-logo.webp" />
 
-Custom detekt plugin from that adds code-level static analysis rules to enforce architectural boundaries in Kotlin projects.
+Custom [detekt](https://detekt.dev/) plugin from that adds code-level static analysis rules to enforce architectural boundaries in Kotlin projects.
 
 ## 🚀 Setup
 
