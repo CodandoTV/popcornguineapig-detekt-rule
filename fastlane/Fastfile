@@ -1,6 +1,6 @@
 lane :update_tag do
   prefix = ENV['PREFIX']
-  version_properties_file = "../popcornguineapigplugin/version.properties"
+  version_properties_file = "../popcornguineapig-detekt-rule/version.properties"
 
   UI.message(">>>>prefix #{prefix}")
 
