@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.jvm)
     alias(libs.plugins.vanniktech.maven.publish)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kover)
 }
 
 repositories {
@@ -63,4 +64,8 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     testImplementation(libs.detekt.test)
     testImplementation(libs.kotlin.test)
+}
+
+tasks.koverHtmlReport {
+    dependsOn("test") // Ensure tests are run before generating the report
 }
