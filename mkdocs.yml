@@ -5,7 +5,7 @@ docs_dir: 'docs'
 
 theme:
   name: material
-  logo: img/popcorngp-logo.webp
+  logo: img/logo.png
   font:
     text: Merriweather Sans
     code: Red Hat Mono
