@@ -1,7 +1,7 @@
 site_name: Popcorn Guineapig Detekt Rule
 repo_url: https://github.com/CodandoTV/popcornguineapig-detekt-rule
 repo_name: Popcornguineapig-detekt-rule
-docs_dir: 'doc'
+docs_dir: 'docs'
 
 theme:
   name: material
