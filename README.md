@@ -25,7 +25,7 @@ Custom [detekt](https://detekt.dev/) plugin from that adds code-level static ana
 
 ```kotlin
 // build.gradle.kts
-detektPlugins("com.github.codandotv:popcornguineapig-detekt-rule:<version>")
+detektPlugins("io.github.codandotv:popcornguineapig-detekt-rule:<version>")
 ```
 
 ### 2. Create the JSON configuration file
@@ -71,7 +71,7 @@ popcorn_guineapig_rules:
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `filePattern` | `String` | Yes | Regex pattern matching the file paths this rule applies to. |
-| `dependenciesAllowed` | `Boolean` | No | When set to `false`, the matched file is **not allowed to have any internal imports**. |
+| `dependenciesAllowed` | `Boolean?` | No | When set to `false`, the matched file is **not allowed to have any internal imports**. |
 | `exclusiveDependencies` | `String[]` | No | List of regex patterns. The file may **only** depend on packages matching at least one of these patterns. |
 | `forbiddenDependencies` | `String[]` | No | List of regex patterns. The file **must not** depend on any package matching these patterns. |
 
