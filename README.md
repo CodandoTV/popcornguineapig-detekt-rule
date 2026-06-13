@@ -10,6 +10,15 @@ Welcome to the **popcornguineapig-detekt-rule**! A CodandoTV library : )
 
 Custom [detekt](https://detekt.dev/) plugin from that adds code-level static analysis rules to enforce architectural boundaries in Kotlin projects.
 
+## Minimum Requirements
+
+| Dependency | Version |
+|---|---|
+| Kotlin | 2.2.0+ |
+| JVM | 11+ |
+| detekt | 1.23.8+ |
+| Gradle | 9.0+ |
+
 ## 🚀 Setup
 
 ### 1. Add the dependency
