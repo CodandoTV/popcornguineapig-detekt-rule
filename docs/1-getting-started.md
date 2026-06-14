@@ -57,7 +57,7 @@ detekt {
 }
 
 dependencies {
-    detektPlugins("io.github.codandotv:popcornguineapig-detekt-rule:<version>)
+    detektPlugins("io.github.codandotv:popcornguineapig-detekt-rule:<version>")
 }
 ```
 

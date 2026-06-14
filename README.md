@@ -10,13 +10,22 @@ Welcome to the **popcornguineapig-detekt-rule**! A CodandoTV library : )
 
 Custom [detekt](https://detekt.dev/) plugin from that adds code-level static analysis rules to enforce architectural boundaries in Kotlin projects.
 
+## Minimum Requirements
+
+| Dependency | Version |
+|---|---|
+| Kotlin | 2.2.0+ |
+| JVM | 11+ |
+| detekt | 1.23.8+ |
+| Gradle | 9.0+ |
+
 ## 🚀 Setup
 
 ### 1. Add the dependency
 
 ```kotlin
 // build.gradle.kts
-detektPlugins("com.github.codandotv:popcornguineapig-detekt-rule:<version>")
+detektPlugins("io.github.codandotv:popcornguineapig-detekt-rule:<version>")
 ```
 
 ### 2. Create the JSON configuration file
@@ -62,7 +71,7 @@ popcorn_guineapig_rules:
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `filePattern` | `String` | Yes | Regex pattern matching the file paths this rule applies to. |
-| `dependenciesAllowed` | `Boolean` | No | When set to `false`, the matched file is **not allowed to have any internal imports**. |
+| `dependenciesAllowed` | `Boolean?` | No | When set to `false`, the matched file is **not allowed to have any internal imports**. |
 | `exclusiveDependencies` | `String[]` | No | List of regex patterns. The file may **only** depend on packages matching at least one of these patterns. |
 | `forbiddenDependencies` | `String[]` | No | List of regex patterns. The file **must not** depend on any package matching these patterns. |
 
