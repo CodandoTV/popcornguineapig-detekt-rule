@@ -42,7 +42,7 @@ forbidden dependencies, no-dependency files). Published by CodandoTV.
 │   │   └── presentation/ — RuleSet provider, rule, extensions
 │   ├── src/test/kotlin/.../
 │   └── version.properties              # VERSION=1.0.0
-├── docs/                               # MkDocs documentation
+├── docs/                               # Zensical documentation
 ├── ai/                                 # Centralized AI context
 │   ├── module-graph.md                 # Module dependency graph
 │   ├── instructions/                   # Platform-specific patterns
@@ -155,7 +155,7 @@ For a file matching `filePattern`, checks run in this order (first match wins):
 |---|---|---|
 | `pr.yml` | PR to `main` | Runs `./gradlew :popcornguineapig-detekt-rule:koverHtmlReport` |
 | `publish.yml` | Manual dispatch | Publishes to Maven Central, runs Fastlane to update tag |
-| `documentation.yml` | PR to `main` (docs changes) | Deploys MkDocs site via `mkdocs gh-deploy` |
+| `documentation.yml` | PR to `main` (docs changes) | Deploys Zensical site via `zensical build` |
 
 ---
 
