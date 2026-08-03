@@ -15,7 +15,7 @@ internal class ForbiddenDependenciesRuleChecker {
         }
         if (affectedRelationship.isNotEmpty()) {
             return ArchitectureViolationError(
-                message = "This file should not depends on $notWith",
+                message = "This file should not depend on $notWith",
                 affectedRelationship = affectedRelationship,
             )
         } else {
