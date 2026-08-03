@@ -625,12 +625,12 @@ Only the <strong>first matching condition</strong> is applied:</p>
 <tr>
 <td><code>forbiddenDependencies</code></td>
 <td><code>String[]</code></td>
-<td>Regex patterns of packages that the file <strong>must not</strong> depend on.</td>
+<td>Regex patterns matched against <strong>fully qualified import paths</strong> (e.g., <code>com.example.domain.SomeClass</code>). The file <strong>must not</strong> depend on imports matching these patterns.</td>
 </tr>
 <tr>
 <td><code>exclusiveDependencies</code></td>
 <td><code>String[]</code></td>
-<td>Regex patterns. The file may <strong>only</strong> depend on packages matching at least one of these patterns.</td>
+<td>Regex patterns matched against <strong>fully qualified import paths</strong> (e.g., <code>com.example.domain.SomeClass</code>). The file may <strong>only</strong> depend on imports matching at least one of these patterns.</td>
 </tr>
 </tbody>
 </table>
@@ -646,7 +646,7 @@ Only the <strong>first matching condition</strong> is applied:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;filePattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^.*/domain/model/.+\\.kt$&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;exclusiveDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;^.*/domain/model/.+\\.kt$&quot;</span>
+<span class="w">    </span><span class="s2">&quot;.*\\.domain\\.model\\..*&quot;</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
@@ -654,7 +654,7 @@ Only the <strong>first matching condition</strong> is applied:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="nt">&quot;filePattern&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^.*/data/.+\\.kt$&quot;</span><span class="p">,</span>
 <span class="w">  </span><span class="nt">&quot;forbiddenDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">    </span><span class="s2">&quot;^.*/presentation/.+\\.kt$&quot;</span>
+<span class="w">    </span><span class="s2">&quot;.*\\.presentation\\..*&quot;</span>
 <span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
