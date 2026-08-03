@@ -62,11 +62,15 @@ public class ArchitectureRulesRule(
                     importsUsedByTheTarget = imports
                 )
                 if (violation != null) {
+                    val violatingImports = violation.affectedRelationship
+                        .joinToString("\n") { "  → $it" }
                     val errorMessage = """        
 Current file:
 ${root.packageFqName}.${root.name}
 
-${violation.message}        
+${violation.message}
+Violating imports:
+$violatingImports        
 """.trimIndent()
 
                     report(

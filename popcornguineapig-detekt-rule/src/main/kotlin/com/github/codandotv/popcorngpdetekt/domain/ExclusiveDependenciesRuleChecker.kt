@@ -14,7 +14,7 @@ internal class ExclusiveDependenciesRuleChecker {
         }
         if (affectedRelationship.isNotEmpty()) {
             return ArchitectureViolationError(
-                message = "This file should only depends on $justWith",
+                message = "This file should only depend on $justWith",
                 affectedRelationship = affectedRelationship,
             )
         } else {

@@ -28,6 +28,10 @@ class ExclusiveDependenciesRuleCheckerTest {
 
         assertNotNull(result)
         assertEquals(
+            "This file should only depend on [.*\\.domain\\..*]",
+            result.message
+        )
+        assertEquals(
             listOf("com.example.data.Repository"),
             result.affectedRelationship
         )
@@ -45,6 +49,10 @@ class ExclusiveDependenciesRuleCheckerTest {
         )
 
         assertNotNull(result)
+        assertEquals(
+            "This file should only depend on [.*\\.domain\\..*]",
+            result.message
+        )
         assertEquals(2, result.affectedRelationship.size)
         assertEquals("com.example.data.Repository", result.affectedRelationship[0])
         assertEquals("com.example.network.Api", result.affectedRelationship[1])

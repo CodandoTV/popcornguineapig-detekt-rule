@@ -16,6 +16,10 @@ class ForbiddenDependenciesRuleCheckerTest {
         )
 
         assertNotNull(result)
+        assertEquals(
+            "This file should not depend on [.*\\.data\\..*]",
+            result.message
+        )
     }
 
     @Test
@@ -32,6 +36,10 @@ class ForbiddenDependenciesRuleCheckerTest {
         )
 
         assertNotNull(result)
+        assertEquals(
+            "This file should not depend on [.*\\.data\\..*, .*\\.network\\..*]",
+            result.message
+        )
         assertEquals(2, result.affectedRelationship.size)
         assertEquals("com.example.data.Repo", result.affectedRelationship[0])
         assertEquals("com.example.network.Api", result.affectedRelationship[1])
