@@ -40,7 +40,7 @@ It is **important** to place the JSON configuration file at the same level as yo
     {
       "filePattern": "^.*/domain/model/.+\\.kt$",
       "exclusiveDependencies": [
-        "^.*/domain/model/.+\\.kt$"
+        ".*\\.domain.model\\..+"
       ]
     },
     {
@@ -92,13 +92,13 @@ For a file matching `filePattern`, the checks are evaluated in the following ord
     {
       "filePattern": "^.*/domain/.+\\.kt$",
       "exclusiveDependencies": [
-        "^.*/domain/.+\\.kt$"
+        ".*\\.domain\\..+"
       ]
     },
     {
       "filePattern": "^.*/data/.+\\.kt$",
       "forbiddenDependencies": [
-        "^.*/presentation/.+\\.kt$"
+        ".*\\.presentation\\..+"
       ]
     },
     {
