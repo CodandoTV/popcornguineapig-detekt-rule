@@ -37,8 +37,8 @@ Each rule entry in the `rules` array supports the following fields:
 |-------------------------|------------|---------------------------------------------------------------------------------------------------|
 | `filePattern`           | `String`   | Regex pattern matching the file paths this rule applies to.                                       |
 | `dependenciesAllowed`   | `Boolean?` | When set to `false`, the matched file is **not allowed to have any internal imports**.            |
-| `forbiddenDependencies` | `String[]` | Regex patterns of packages that the file **must not** depend on.                                  |
-| `exclusiveDependencies` | `String[]` | Regex patterns. The file may **only** depend on packages matching at least one of these patterns. |
+| `forbiddenDependencies` | `String[]` | Regex patterns matched against **fully qualified import paths** (e.g., `com.example.domain.SomeClass`). The file **must not** depend on imports matching these patterns. |
+| `exclusiveDependencies` | `String[]` | Regex patterns matched against **fully qualified import paths** (e.g., `com.example.domain.SomeClass`). The file may **only** depend on imports matching at least one of these patterns. |
 
 ### Examples
 
@@ -58,7 +58,7 @@ Each rule entry in the `rules` array supports the following fields:
 {
   "filePattern": "^.*/domain/model/.+\\.kt$",
   "exclusiveDependencies": [
-    "^.*/domain/model/.+\\.kt$"
+    ".*\\.domain\\.model\\..*"
   ]
 }
 ```
@@ -69,7 +69,7 @@ Each rule entry in the `rules` array supports the following fields:
 {
   "filePattern": "^.*/data/.+\\.kt$",
   "forbiddenDependencies": [
-    "^.*/presentation/.+\\.kt$"
+    ".*\\.presentation\\..*"
   ]
 }
 ```

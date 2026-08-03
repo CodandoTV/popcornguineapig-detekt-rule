@@ -12,7 +12,7 @@ Create your configuration file at the same level of your `detekt.yml` definition
     {
       "filePattern": "^.*/domain/model/.+\\.kt$",
       "exclusiveDependencies": [
-        "^.*/domain/model/.+\\.kt$"
+        ".*\\.domain\\.model\\..*"
       ]
     },
     {
