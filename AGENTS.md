@@ -83,7 +83,7 @@ Current skills:
 |---|---|
 | `documentation-review` | Scan docs/ for broken links, stale config examples, inconsistencies |
 | `minimum-requirements` | Verify and update README minimum dependency versions |
-| `release-notes` | Bump version, generate changelog, prompt to commit/tag |
+| `trigger-release` | Create/update CHANGELOG.md, bump version, create tag to trigger publish |
 
 ---
 
@@ -154,7 +154,7 @@ For a file matching `filePattern`, checks run in this order (first match wins):
 | Workflow | Trigger | What It Does |
 |---|---|---|
 | `pr.yml` | PR to `main` | Runs `./gradlew :popcornguineapig-detekt-rule:koverHtmlReport` |
-| `publish.yml` | Manual dispatch | Publishes to Maven Central, runs Fastlane to update tag |
+| `publish.yml` | Tag push (`v*`) | Publishes to Maven Central |
 | `documentation.yml` | PR to `main` (docs changes) | Deploys Zensical site via `zensical build` |
 
 ---

@@ -57,7 +57,7 @@ file is a one-line pointer to it. All detailed guidance lives under `ai/`.
 | `ai/instructions/gemini-code.md` | Gemini Code | Platform-specific conventions |
 | `ai/skills/documentation-review/SKILL.md` | Any assistant | How to review docs for inconsistencies |
 | `ai/skills/minimum-requirements/SKILL.md` | Any assistant | How to check + update min dependency versions |
-| `ai/skills/release-notes/SKILL.md` | Any assistant | How to bump version and generate changelog |
+| `ai/skills/trigger-release/SKILL.md` | Any assistant | How to bump version, update changelog, and trigger publish |
 | `openspec.json` | OpenCode | OpenCode config — points to AGENTS.md + ai/skills |
 | `CLAUDE.md` | Claude Code | Lightweight pointer → AGENTS.md |
 | `.cursorrules` | Cursor | Lightweight pointer → AGENTS.md |
