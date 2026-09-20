@@ -1,11 +1,22 @@
 ---
 name: documentation-review
-description: Scans docs/ for broken links, stale config examples, and inconsistencies with README and source code
+description: Use when the user asks to review, audit, or check docs/ for broken links, stale JSON config examples, or inconsistencies with README.md and source code.
+license: MIT
+compatibility: opencode
+metadata:
+  audience: maintainers
+  workflow: docs
 ---
 
 # documentation-review
 
-When invoked, this skill will:
+## What I do
+
+Audit the documentation set for defects and drift against the implementation.
+
+## When to use me
+
+Use when the user asks to review, audit, or check `docs/`, or when documentation may have drifted from the source after a change. Also use before a release.
 
 ## 1. Scan internal links in `docs/`
 

@@ -1,11 +1,22 @@
 ---
 name: trigger-release
-description: Creates or updates CHANGELOG.md, bumps version, and creates a tag to trigger the publish workflow
+description: Use when the user wants to cut or publish a release — bump version.properties, update CHANGELOG.md, and push a v* tag to trigger publish.yml.
+license: MIT
+compatibility: opencode
+metadata:
+  audience: maintainers
+  workflow: release
 ---
 
 # trigger-release
 
-When invoked, this skill will:
+## What I do
+
+Cut a tagged release: bump the version, record a changelog entry, and push the tag that triggers the publish workflow.
+
+## When to use me
+
+Use when the user asks to release, publish, bump the version, or tag a new version.
 
 1. **Verify branch and sync status**:
    - Confirm the current branch is `main`. If not, warn the user and exit.
