@@ -100,6 +100,13 @@ Before starting any task:
 | `minimum-requirements` | Verify and update minimum dependency versions (Kotlin, JVM, detekt, Gradle) in README.md |
 | `trigger-release` | Cut a release — bump version.properties, update CHANGELOG.md, push v* tag to trigger publish |
 
+### Maintenance
+- Adding a skill: create `.opencode/skills/<skill-name>/SKILL.md` — no other file needs
+  updating; opencode auto-discovers it at startup.
+- Do not add per-assistant context files (Claude, Cursor, Copilot, Gemini). OpenCode is
+  the sole supported assistant; anything that would go in such a file belongs in this
+  `AGENTS.md`.
+
 ---
 
 ## Commands
