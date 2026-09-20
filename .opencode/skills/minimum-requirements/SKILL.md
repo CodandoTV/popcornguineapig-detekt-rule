@@ -1,11 +1,22 @@
 ---
 name: minimum-requirements
-description: Checks all project dependencies and updates README.md with the minimum requirements for using the library
+description: Use when the user wants to verify or update the minimum dependency requirements in README.md — Kotlin, JVM, detekt, and Gradle versions.
+license: MIT
+compatibility: opencode
+metadata:
+  audience: maintainers
+  workflow: release
 ---
 
 # minimum-requirements
 
-When invoked, this skill will:
+## What I do
+
+Derive this library's minimum dependency requirements from the build files and keep the `README.md` section in sync.
+
+## When to use me
+
+Use when the user asks to check or update minimum requirements, or after a dependency or version bump.
 
 1. Read the submodule `build.gradle.kts` at `popcornguineapig-detekt-rule/build.gradle.kts` to identify all declared dependencies:
    - `compileOnly(libs.detekt.api)` → maps to detekt API version from `gradle/libs.versions.toml`
