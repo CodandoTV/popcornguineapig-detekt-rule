@@ -1,5 +1,5 @@
 [versions]
-kotlin = "2.2.0"
+kotlin = "2.4.21"
 junit = "4.13.2"
 gradle = "8.7.3"
 vanniktech = "0.37.0"
