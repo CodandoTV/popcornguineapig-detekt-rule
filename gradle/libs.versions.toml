@@ -5,7 +5,7 @@ gradle = "8.7.3"
 vanniktech = "0.37.0"
 kover = "0.9.11"
 detekt = "1.23.8"
-kotlinx-serialization = "1.9.0"
+kotlinx-serialization = "1.13.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
